@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
+    console.log(req.session);
+
     Post.findAll({
     attributes: [
         'id',
@@ -35,17 +37,13 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/', (req, res) => {
-    res.render('homepage', {
-        id: 1,
-        title: 'Handlebars Docs',
-        content: 'This blog post is about the handlebars docs.',
-        created_at: new Date(),
-        comments: [{}, {}],
-        user: {
-          username: 'test_user'
-        }
-      });
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;
