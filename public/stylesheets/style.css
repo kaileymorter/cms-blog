@@ -161,6 +161,9 @@
   .homepage{
     padding: 20px;
   }
+  .homepage h2{
+    text-align: center;
+  }
   
   .post-homepage {
     margin-bottom: 2%;

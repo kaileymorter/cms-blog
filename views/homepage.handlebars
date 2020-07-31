@@ -6,7 +6,11 @@
 </div>
 
 {{else}}
-<h2>There are no blog posts yet! Login or sign-up to write the first one!</h2>
+{{#if loggedIn}}
+<h2><a href="/dashboard">Write</a> the first blog post!</h2>
+{{else}}
+<h2>There are no blog posts yet! <a href="/login">Login</a> or <a href="/signup">sign-up</a> to write the first one!</h2>
+{{/if}}
 {{/each}}
 
 </section>
