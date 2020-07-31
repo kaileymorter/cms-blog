@@ -4,38 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CMS Blog</title>
+  <title>Developing Speaking</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
+
+<header>
+  <h1>Developing Speaking: A Tech Blog</h1>
+  <nav class="nav">
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <a href="/dashboard">Dashboard</a>
+    <a id="logout" href="/logout">Logout</button></a>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+</header>
+
 <body>
   <div class="wrapper">
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      {{#if loggedIn}}
-      <a href="/dashboard">Dashboard</a>
-      <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-      <a href="/login">Login</a>
-      {{/if}}
-    </nav>
-  </header>
-  <div>
-      <h1>
-      <a href="/">The Tech Blog</a>
-    </h1>
-    </div>
     <main>
       {{{ body }}}
     </main>
+
     <footer>
-      Thanks for visiting!
+      <p>Thanks for visiting!</p>
     </footer>
   </div>
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+  
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>

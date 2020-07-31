@@ -1,13 +1,11 @@
-<article class="post">
-  {{> post-info post }}
-</article>
 
+{{> post-info post }}
+<br>
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
-
   <div>
     <button type="submit">add comment</button>
   </div>

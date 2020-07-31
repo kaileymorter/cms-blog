@@ -20,6 +20,26 @@
   a:hover {
     color: #3486eb;
   }
+
+  header {
+    background-color: #225ca3;
+    width: 100%;
+  }
+
+  nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  nav a, h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+  }
+  nav button {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+  }
   
   button {
     background-color: #225ca3;
@@ -46,6 +66,13 @@
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font: sans-serif
+  }
+
+  .post-body {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
   }
   
   textarea:focus, input:focus {
@@ -64,6 +91,19 @@
   
   form label {
     display: block;
+  }
+
+  .login-form, .signup-form {
+    margin-bottom: 2%;
+    line-height: 150%;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    box-shadow: 4px 8px 15px #888888;;
+    padding: 20px;
+  }
+
+  .signup-form {
+    margin-top: 30px;
   }
   
   .wrapper {
@@ -89,7 +129,7 @@
   
   main {
     flex: 1;
-    padding: 2% 4%;
+    padding: 2% 2%;
   }
   
   .btn-no-style {
@@ -117,16 +157,41 @@
   .delete-post-btn:hover {
     background-color: #ff643d;
   }
+
+  .homepage{
+    padding: 20px;
+  }
   
-  .post {
+  .post-homepage {
     margin-bottom: 2%;
     line-height: 150%;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    box-shadow: 4px 8px 15px #888888;;
+    padding: 20px;
+  }
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .dashboard-posts {
+    margin-bottom: 2%;
+    line-height: 150%;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    box-shadow: 4px 8px 15px #888888;;
+    padding: 20px;
   }
   
   .post .title span {
     font-style: italic;
     font-size: 90%;
     color: #7d7d7d;
+  }
+
+  ul {
+    list-style: none;
   }
   
   .edit-link {
@@ -151,6 +216,15 @@
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
+  }
+
+  .new-post-form {
+    margin-bottom: 2%;
+    line-height: 150%;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    box-shadow: 4px 8px 15px #888888;;
+    padding: 20px;
   }
   
   .new-post-form input {
