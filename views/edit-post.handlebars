@@ -10,7 +10,7 @@
     </div>
     <div>
         <h3>Body</h3>
-      <input name="post-body" type= "text" value="{{post.content}}" />
+      <textarea name="post-body" type= "text" value="{{post.content}}">{{post.content}}</textarea>
     </div>
     <div>
       Written by you on {{format_date post.created_at}}
